@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div style="background-image: url('https://image.freepik.com/free-photo/modern-office-workplace-desktop-background-in-pastel-with-copy-space-business-concept_42422-277.jpg');">
+<style>
+h1 {
+  display: block;
+  font-size: 4em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+form {
+    font-size: 2em;
+     margin-top: 0.67em;
+     margin-bottom: 0.67em;
+     margin-left: 0;
+     margin-right: 0;
+}
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+
+}
+</style>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<h1 style="text-align:center">Login</h1>
+    <br>
+    <br>
+    <form style="text-align:center" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button >Login</button>
+        <br>
+        <br>
+        <div><b>---------------</b><b>OR</b><b>---------------</b></div>
+        <br>
+        <br>
+        <a href="{% url 'register_url' %}">Sign Up</a>
+    </form>
+{% endblock %}
